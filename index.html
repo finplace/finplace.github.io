@@ -1,0 +1,74 @@
+<doctype! html lang="en">
+	<html>
+
+	<head>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica Neue:300,400,500,700,400italic">
+		<meta charset="utf-8" />
+		<meta name="description" content="finplace">
+		<title>Finplace</title>
+		<script type="text/javascript">
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+		<script src="js/jquery-scrolltofixed-min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				// grab the initial top offset of the navigation 
+				var stickyNavTop = $('.nav').offset().top;
+				// our function that decides weather the navigation bar should have "fixed" css position or not.
+				var stickyNav = function () {
+					var scrollTop = $(window).scrollTop(); // our current vertical position from the top
+					// if we've scrolled more than the navigation, change its position to fixed to stick to top,
+					// otherwise change it back to relative
+					if (scrollTop > stickyNavTop) {
+						$('.nav').addClass('sticky');
+					}
+					else {
+						$('.nav').removeClass('sticky');
+					}
+				};
+				stickyNav();
+				// and run it again every time you scroll
+				$(window).scroll(function () {
+					stickyNav();
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<!--Inicia barra de menu-->
+			<nav> <a class="finplace">
+         	Finplace
+         </a>
+				<ul>
+					<li> <a href="">What</a> </li>
+					<li> <a href="">Who</a> </li>
+					<li> <a href="">Download</a> </li>
+				</ul>
+			</nav>
+			<!--Termina Barra de menu-->
+		</header>
+		<section>
+			<!--Inicia pagina principal-->
+			<H1>Finplace</H1>
+			<H2>Discover the best attractions of any city with a single click</H2>
+			<!--Termina Pagina Principal-->
+		</section>
+		<!--Inicia Explicaciones-->
+		<section>
+			<!--Inicia ¿Que es?-->
+			<section id="">
+				<article>What is?</article>
+				<article>Finplace is the easiest way to find new attractions in any city, because Findplace Knows You.</article>
+				<article>Get advice in seconds</article>
+				<article>Only need use our iOS and Androis apps (the magic of our algorithms)</article>
+			</section>
+		</section>
+		<footer>
+			<section> <a>|</a> <a class="" href=""> About US </a> <a>|</a> <a class="" href=""> Blog </a> <a>|</a> <a class="" href=""> FAQ </a> <a>|</a> <a class="" href=""> Contact </a> <a>|</a> </section>
+		</footer>
+	</body>
+
+	</html>
